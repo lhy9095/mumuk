@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.contain{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;	
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+}
+
+th {
+	color: grey;
+}
+
+td {
+	border-bottom: solid;
+	border-bottom-color: orange;
+}
+
+#userId {
+	outline: none;
+	border: none;
+ 	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 400px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#err, #err2 {
+	font-size: 1px;
+	color: blue;
+}
+
+#password {
+	outline: none;
+	border: none;
+	/* border-bottom: solid orange;
+	border-bottom-color: orange; */
+	width: 400px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#passwordConfirm {
+	outline: none;
+	border: none;
+	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 420px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#userName {
+	outline: none;
+	border: none;
+	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 420px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#nickName {
+	outline: none;
+	border: none;
+	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 420px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#tel {
+	outline: none;
+	border: none;
+	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 420px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+input::placeholder {
+	color: Gainsboro;
+}
+
+#email_id {
+	outline: none;
+	border: none;
+	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 420px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#email_domain {
+	outline: none;
+	border: none;
+	/* border-bottom: solid;
+	border-bottom-color: orange; */
+	width: 420px;
+	height: 56px;
+	font-size: 20px;
+	width: 90%;
+}
+
+#BtnId, #BtnNick {
+	background-color: orange;
+	border-radius: 10px;
+	color: white;
+	float: right;
+}
+
+#Btn {
+	width: 420px;
+	height: 56px;
+	margin: 50px;
+	background-color: darkorange;
+	border-radius: 50px;
+	color: white;
+	font-size: 20px;
+	width: 90%;
+}

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+.category {
+	width: 100%;
+	height: 200px;
+	border-bottom: 1px solid #dbdbdb;
+	background-color: #f7f7f7;
+}
+
+a {
+	text-decoration: none;	
+} 
+
+.categoryBtn {
+	border: 0;
+	outline: 0;
+	background-color: #f7f7f7;
+	cursor: pointer;
+}
+
+.categoryBtn:hover {
+	transform: scale(1.1);
+}
+
+.food_category a {
+	color: black;
+	font-weight: bolder;
+}
+
+.food_category {
+	display: flex;	
+	justify-content: center;
+}
+
+.food_category div {
+	/* border: 1px solid #ddd; */
+	margin: 60px 20px;
+}
+
+.food_category img{
+	width: 70px;
+	height: 70px;
+}
+
+.cate_txt {
+	font-weight: bolder;
+	text-align: center;
+}
+
+.content {
+	display: block;
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.search_wrap {
+	 margin : 30px 70px 3px 70px;
+}
+
+.search_icon {
+	float: right;
+	width: 25px;
+}
+
+.search_bar {
+	float: right;
+	border: none;
+	border-bottom: 2px solid dimgray;
+	outline: none;	
+}
+
+.restaurant_list a {
+	color: #424242;
+}
+
+.restaurant {
+	display: flex;
+	padding: 40px 0;
+	margin : 0 70px;
+	border-bottom: 1px solid #ddd;
+}
+
+.restaurant div {
+	float: right;	
+}
+
+.thumbnail img {
+	width: 240px;
+	height: 240px;
+}
+
+.info {
+	width: 100%;
+	margin-left: 20px; 
+}
+
+.wannaEat_img {
+	cursor: pointer;
+}
+
+h3 {
+	margin: 8px;
+}
+
+.addr {
+	margin-left: 8px;
+	color: gray; 
+}
+
+.menu {
+	margin-left: 8px;
+	margin-top: 10px;
+	color: #1d2327;
+}
+
+.bookmark {
+	text-align: center;
+}
+
+.bookmark img {
+	width: 38px;
+}
+
+.bookmark_txt {
+	font-size: 12px;
+	color: gray;
+}
+
+p {
+	margin: 0;
+}
+
+.paging {
+	text-align: center;
+	margin : 10px;
+}
+
+.btn4 { 
+	color: #000; 
+	border-radius: 30px; 
+	transition: transform 0.3 ease; 
+	box-shadow: 0.3s ease; 
+	background-color: white; 
+	border-color: white;
+}
+
+.btn4:hover { 
+	transform: translate(0, -6px);
+}
+
+
+.btn5{ 
+	color: white; 
+	border-radius: 30px; 
+	background-color: orange; 
+	border-color: white;
+	cursor: pointer;
+	margin-top: 10px;
+}

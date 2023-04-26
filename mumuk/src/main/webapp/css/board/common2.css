@@ -1,0 +1,30 @@
+@charset "UTF-8";
+caption { font-size: 20px; 
+		  line-height: 160%; 
+		  font-weight: bold; 
+		  text-align: left;
+		  caption-side: top;
+}
+body { background-color: white; }
+main { display: block; 
+	   width:900px; 
+	   margin:0 auto; 
+	   position:relative;
+	   overflow: auto; 
+}
+table { width: 90%; 
+	    background-color: white;
+	    margin-top: 130px;
+	    margin-left: 55px;
+}
+th { text-align: center; 
+	 color: black; 
+	 background-color: white; 
+	 border-bottom: solid 0.2px; 
+	 border-bottom-color: gainsboro;
+	 border-top: solid 3px;
+	 border-top-color: black;
+}
+td { background-color: white; text-align: center; border-bottom: solid 0.2px; border-bottom-color: gainsboro;}
+th, td { padding: 15px; }
+#err { color: red; font-weight: bold;}

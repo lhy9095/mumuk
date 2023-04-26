@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.reviewForm {
+	display: block;
+	width: 900px;
+	margin: 100px auto;
+	padding-left: 400px;
+	padding-bottom: 150px;
+	position: relative;
+}
+
+.rname {
+	font-size: 25px;
+	font-weight: bolder;
+	color: darkorange;
+}
+
+.nickName {
+	font-size: 20px;
+	font-weight: bolder;
+	color: dimgray;
+}
+
+.star{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.on {
+	color: gold;
+	text-indent: 0;
+}
+
+.starRate {
+	margin-bottom: 10px;
+}
+
+.textarea {
+	border: 2px solid #ddd;
+	outline-color: orange;
+}
+
+.btn5{ 
+	color: white; 
+	border-radius: 30px; 
+	background-color: orange; 
+	border-color: white;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 450px;
+}

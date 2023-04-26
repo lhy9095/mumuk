@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorator">
+	<!-- lhy폴더에 있는 모든 프로그램은 lhy_decorator.jsp를 적용해라 -->
+	<decorator name="decorator" page="lhy_decorator.jsp">
+		<pattern>/view/restaurant/*</pattern>
+		<pattern>/view/board/*</pattern>
+		<pattern>/view/member/*</pattern>
+	</decorator>
+	<decorator name="decorator_main" page="main_decorator.jsp">
+		<pattern>/view/main/*</pattern>
+	</decorator>
+	<!-- 아래 프로그램은 예외이므로 decorator를 적용하지 마라 -->
+	<excludes>
+		<pattern>/view/member/confirmId.*</pattern>
+		<pattern>/view/member/confirmNick.*</pattern>
+		<pattern>/view/board/replyWriteForm.*</pattern>
+        <pattern>/view/board/replyContent.*</pattern>
+        <pattern>/view/restaurant/bookmarkUpdate.*</pattern>
+        <pattern>/view/restaurant/bookmarkChk.*</pattern>
+	</excludes>
+</decorators>

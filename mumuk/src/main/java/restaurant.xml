@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="restaurantns">
+	<!-- 식당 전체 리스트(최신순) -->
+	<select id="selectList" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' order by rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- 식당 전체 리스트(조회순) -->
+	<select id="listReadCount" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' order by readcount desc, rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- 총 식당 수 -->
+	<select id="getTotal" resultType="integer">
+		select count(*) from restaurant where del = 'n'
+	</select>
+
+	<!-- 식당 상세정보 select -->
+	<select id="selectInfo" parameterType="integer" resultType="restaurant">
+		select * from restaurant where rno = #{rno} and del = 'n'
+	</select>
+	
+	<!-- 식당 상세정보 조회수 증가 -->
+	<update id="readcountUpdate" parameterType="integer">
+		update restaurant set readcount = readcount + 1 where rno = #{rno}
+	</update>
+
+	<!-- 카테고리별 총 식당 수 --> 
+	<select id="cateTotal" parameterType="string" resultType="integer"> 
+		select count(*) from restaurant where del = 'n' and sep_1 = #{food_cate}
+	</select>
+	
+	<!-- 카테고리별 식당 리스트(최신순) -->
+	<select id="cateList" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' and sep_1 = #{food_cate} order by rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- 카테고리별 식당 리스트(조회순) -->
+	<select id="cateReadCount" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' and sep_1 = #{food_cate} order by readcount desc, rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- 여기부터 메뉴추천 1 -->
+	
+	<!-- 카테고리별 식당 리스트(메뉴추천1<step_1>) -->
+	<select id="cateListRe1" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' and sep_1 = #{selectedFood} order by rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- step_1 총 식당 수 --> 
+	<select id="cateTotal1" parameterType="string" resultType="integer"> 
+		select count(*) from restaurant where del = 'n' and sep_1 = #{selectedFood}
+	</select>
+	
+	<!-- 카테고리별 식당 리스트(메뉴추천1<step_2>) -->
+	<select id="cateListRe2" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' and sep_2 = #{selectedFood} order by rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- step_2 총 식당 수 --> 
+	<select id="cateTotal2" parameterType="string" resultType="integer"> 
+		select count(*) from restaurant where del = 'n' and sep_2 = #{selectedFood}
+	</select>
+	
+	<!-- 카테고리별 식당 리스트(메뉴추천1<step_3>) -->
+	<select id="cateListRe3" parameterType="map" resultType="restaurant"> 
+		select * from (select rownum rn, a.* from (
+		select * from restaurant where del = 'n' and sep_3 = #{selectedFood} order by rno desc) a)
+		where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<!-- step_3 총 식당 수 --> 
+	<select id="cateTotal3" parameterType="string" resultType="integer"> 
+		select count(*) from restaurant where del = 'n' and sep_3 = #{selectedFood}
+	</select>
+	
+	<select id="sepList" resultType="restaurant">
+		select * from restaurant
+	</select>
+	
+	<select id="rnoList" parameterType="string" resultType="restaurant">
+		select * from restaurant where sep_3 = #{arrFinish}  
+	</select>
+	
+	<select id="rnoList2" parameterType="string" resultType="restaurant">
+		select * from restaurant where sep_2 = #{arrFinish}  
+	</select>
+	
+
+</mapper>

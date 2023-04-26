@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.contain {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;	
+}
+
+.title {
+	color: orange;
+}
+
+.btn{
+	margin-bottom: 150px;
+}
+
+input {
+	width: 400px;
+	height: 56px;
+	margin: 50px;
+	background-color: darkorange;
+	border-radius: 50px;
+	color: white;
+	font-size: 20px;
+}
